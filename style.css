@@ -1,0 +1,221 @@
+/*
+  GLOBAL STYLES
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin-top: 80px;
+  /* Optional background: remove or replace 'background.jpg' as needed */
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+    url("background.jpg") center/cover no-repeat;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  min-height: 100vh;
+  padding: 0; /* Remove any extra margins */
+ margin: 0;
+}
+
+
+/*
+  TOP NAV BAR
+*/
+.top-nav {
+  position: fixed;  /* pins the nav bar to the top of the viewport */
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 60px;     /* for example */
+ z-index: 999;
+  background-color: #fff;
+  border-bottom: 2px solid #ccc;
+  padding: 1rem;
+  display: flex;         /* put nav-left and nav-right side by side */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.top-nav li {
+  margin-left: 1rem;
+}
+
+.top-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 0.5rem;
+  transition: color 0.3s;
+}
+
+.top-nav a:hover {
+  color: #67091F; /* Hover color */
+}
+
+/*
+  CONTAINER
+  - Two-column layout
+*/
+.container {
+  display: flex;
+  justify-content: space-between; /* Ensure equal spacing on sides */
+  align-items: center; /* Vertically center content */
+  max-width: 1000px; /* Reduce the width to bring them closer */
+  margin: 0 auto;
+  padding: 2rem;
+  height: calc(100vh - 80px); /* Adjust height to fill screen */
+}
+
+/*
+  LEFT PANEL
+*/
+.left-panel {
+  flex: 1;
+
+  margin-right: 2rem;
+}
+
+.name {
+  font-size: 2.5rem;
+  color: #67091F;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.profile-header {
+  color: #4A0616;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-quote {
+  font-style: italic;
+  color: #555;
+  border-left: 3px solid #ddd;
+  padding-left: 1rem;
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+/*
+  RIGHT PANEL
+*/
+.right-panel {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start; /* Align image closer to the text */
+  align-items: center;
+  max-width: 400px; /* Restrict image column width */
+}
+
+.image-container {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+   /* push the image to the right side */
+  margin-left: 1rem;
+}
+
+.image-container img {
+  width: 100%; /* Let the image adapt to the new column size */
+ height: auto;
+ max-width: 300px; /* Keep image size proportional */
+}
+
+
+/*
+  CONTACT INFO
+*/
+.contact-info p {
+  margin-bottom: 0.5rem;
+}
+.intro-quote {
+  font-size: 1.5rem;  /* Slightly larger than normal text */
+  font-style: italic; /* Give it an italic style */
+  color: #555;        /* A subdued color */
+  margin-bottom: 1rem;   /* Spacing beneath the quote */
+  border-left: 4px solid #ddd; /* Optional decorative left border */
+  padding-left: 1rem;    /* Space between border and text */
+}
+
+/*
+  SECTIONS FOR EDUCATION, PUBLICATIONS, RESEARCH, INTERESTS
+*/
+section {
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Add a border top to all sections except the first */
+section:not(:first-of-type) {
+  border-top: 1px solid #ccc;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  color: #67091F;
+}
+.project-box {
+  border: 1px solid #ddd; /* Light border around the box */
+  padding: 1rem; /* Space inside the box */
+  margin: 1rem 0; /* Space between boxes */
+  border-radius: 8px; /* Slightly rounded corners */
+  background-color: #f9f9f9; /* Light background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.project-box h3 {
+  margin-bottom: 0.5rem; /* Space below the heading */
+  color: #67091F; /* Match your site's color theme */
+}
+
+.project-box ul {
+  padding-left: 1.5rem; /* Indent bullet points */
+}
+
+.project-box ul li {
+  margin-bottom: 0.5rem; /* Space between list items */
+  line-height: 1.6; /* Better readability */
+}
+.location {
+  font-size: 0.9rem; /* Smaller font size for fine print */
+  color: #555; /* Subtle color */
+  margin-top: -0.5rem; /* Adjust spacing to bring it closer to the name */
+  font-style: italic; /* Optional: Italicize the text */
+  text-align: left; /* Align with the name */
+}
+
+.site-footer {
+  text-align: center; /* Center the text */
+  margin-top: 2rem; /* Add space above the footer */
+  padding: 1rem 0; /* Add padding to the footer */
+  background-color: #f8f8f8; /* Subtle background color */
+  color: #555; /* Text color */
+  font-style: italic; /* Italicize the text */
+  font-size: 1.2rem; /* Slightly larger font for the quote */
+  border-top: 1px solid #ddd; /* Optional: Add a border on top */
+}
+
+.site-footer .quote {
+  margin: 0; /* Remove default margin from the paragraph */
+}
